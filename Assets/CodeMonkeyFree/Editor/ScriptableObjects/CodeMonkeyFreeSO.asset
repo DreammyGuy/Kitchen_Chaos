@@ -14,39 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1742801063
+  lastShownTimestamp: 1749119155
   lastUpdateResponse:
-    version: 1.00
+    version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1742801063
+  checkedLastUpdateTimestamp: 1749119155
   lastQOTDResponse:
-    questionId: 163
-    questionText: What is the purpose of Unity Hub?
-    answerA: Provide a space for the community to interact
-    answerB: Manage different Unity versions and Projects
-    answerC: Dashboard for Unity services
+    questionId: 187
+    questionText: 'Is this valid code?
+
+      <p>Vector3? targetPosition = new Vector3(10,
+      0, 0);</p>
+
+      <p>Vector3 moveToPosition = targetPosition;</p>'
+    answerA: Yes
+    answerB: No
+    answerC: 
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1742801063
+  lastQotdTimestamp: 1749119155
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/humbleBundleSyntyMar25.png
-    topText: Make ANY game with these awesome Assets! (96% OFF ENDS SOON!)
-    topLink: humblebundle
-    bottomText: Learn Unity DOTS for MASSIVE Performance Boosts! (and make an RTS)
-    bottomLink: dotscourse
-  lastDynamicHeaderTimestamp: 1742801063
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/ultimateOverview70_6FreeUpdate.png
+    topText: Learn how to use 70 Tools and Features! (Unity 6 Updated)
+    topLink: ultimateunityoverview
+    bottomText: My 10+ Years of C# Knowledge in 1 Course!
+    bottomLink: csharpcourse
+  lastDynamicHeaderTimestamp: 1749119155
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1742801063
+  websiteLatestMessageTimestamp: 1749119155
   websiteLatestVideos:
     videos:
-    - youTubeId: ZIg7VoD9ptI
-      title: The FUTURE of Unity in 2025 and BEYOND!
-    - youTubeId: W_XOZAWJF24
-      title: I made the MOST PROFITABLE Game as a Test!
-    - youTubeId: J0KMvH-yFmA
-      title: TOP 10 NEW Games, Made with Unity! (FEBRUARY 2025)
-    - youTubeId: DOSLOa7cnoE
-      title: I SHOULD have done this a long time ago, and YOU too!
-  websiteLatestVideosTimestamp: 1742801063
+    - youTubeId: U5Wolv65yK8
+      title: Dev followed my FREE course, then made $150,000!
+    - youTubeId: NzyU-WuXfk4
+      title: TOP 20 Visual Assets to INSPIRE YOU! (MAY 2025)
+    - youTubeId: iB1_PBY-BCQ
+      title: Make BETTER games FASTER, Learn 70 Unity Tools and Features! (6th FREE
+        Update)
+    - youTubeId: 29ejb-nzO1A
+      title: Is Schedule I a LOW EFFORT Game?
+  websiteLatestVideosTimestamp: 1749119155
