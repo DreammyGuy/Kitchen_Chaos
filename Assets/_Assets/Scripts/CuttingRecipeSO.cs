@@ -6,4 +6,5 @@ public class CuttingRecipeSO : ScriptableObject
 {
     public KitchenObjectSO inputKitchenObjectSO;
     public KitchenObjectSO outputKitchenObjectSO;
+    public int cuttingProgressMax;
 }

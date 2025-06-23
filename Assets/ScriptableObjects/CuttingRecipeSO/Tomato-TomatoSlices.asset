@@ -16,3 +16,4 @@ MonoBehaviour:
     type: 2}
   outputKitchenObjectSO: {fileID: 11400000, guid: fbe47a5e20633594ea99009b03e569bc,
     type: 2}
+  cuttingProgressMax: 3
