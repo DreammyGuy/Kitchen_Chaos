@@ -16,7 +16,7 @@ public class BaseCounter : MonoBehaviour, IKitchenObjectParent
 
     public virtual void InteractAlternate(Player player)
     {
-        Debug.LogError("AlterateInteracting with BaseCounter");
+        //Debug.LogError("AlterateInteracting with BaseCounter");
     }
 
     public Transform GetKitchenObjectFollowTransform()
