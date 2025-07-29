@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1753672553
+  lastShownTimestamp: 1753759743
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1753672553
+  checkedLastUpdateTimestamp: 1753759743
   lastQOTDResponse:
     questionId: 205
     questionText: 'Is this valid code?
@@ -29,7 +29,7 @@ MonoBehaviour:
     answerC: 
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1753672553
+  lastQotdTimestamp: 1753759743
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/summer2025CodeMonkeyBundle.png
     topText: All my Courses (and Games) in one Bundle! DEEP DISCOUNT ONLY THIS SUMMER!
@@ -37,19 +37,19 @@ MonoBehaviour:
     bottomText: Get my Code Monkey Toolkit and make games BETTER and FASTER! 50%
       OFF right now!
     bottomLink: toolkit
-  lastDynamicHeaderTimestamp: 1753672553
+  lastDynamicHeaderTimestamp: 1753759743
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1753672553
+  websiteLatestMessageTimestamp: 1753759743
   websiteLatestVideos:
     videos:
+    - youTubeId: K-AjBKP4uq0
+      title: I Made Over $1 MILLION Making Indie Games, Could YOU Do This in 2025?
     - youTubeId: YMMS621ZoI8
       title: NEW Steam 2025 Marketing Tips you NEED to know!
     - youTubeId: SfZquiwnEPQ
       title: TOP 10 NEW Systems and Tools JUNE 2025! | Unity Asset Store
     - youTubeId: oBCXk_6Fft0
       title: This MISTAKE cost $28,000,000!
-    - youTubeId: TYgEWbK-mCc
-      title: Learn C# by DOING, Hangman Beginner Project (Overview + Walkthrough)
-  websiteLatestVideosTimestamp: 1753672553
+  websiteLatestVideosTimestamp: 1753759743
