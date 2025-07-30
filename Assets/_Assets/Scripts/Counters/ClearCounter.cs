@@ -26,6 +26,25 @@ public class ClearCounter : BaseCounter
             if (player.HasKitchenObject())
             {
                 // Player has a kitchen object
+                if (player.GetKitchenObject().TryGetPlateKitchenObject(out PlateKitchenObject plateKitchenObject))
+                {
+                    // Player has a plate kitchen object
+                    if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
+                    {
+                        GetKitchenObject().DestroySelf();
+                    }
+                }
+                else
+                {
+                    if (GetKitchenObject().TryGetPlateKitchenObject(out plateKitchenObject))
+                    {
+                        // ClearCounter already has a plate kitchen object
+                        if (plateKitchenObject.TryAddIngredient(player.GetKitchenObject().GetKitchenObjectSO()))
+                        {
+                            player.GetKitchenObject().DestroySelf();
+                        }
+                    }
+                }
             }
             else
             {
