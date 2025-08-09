@@ -22,7 +22,9 @@ public class GameManager : MonoBehaviour
 
     private float waitingToStartTimer = 1f;
     private float countingToStartTimer = 3f;
-    private float playingTimer = 5f;
+    private float gamePlayingTimer;
+    private float gamePlayingTimerMax = 10f;
+
 
     private void Awake()
     {
@@ -56,15 +58,17 @@ public class GameManager : MonoBehaviour
                 {
                     state = State.Playing;
                     OnStateChanged?.Invoke(this, EventArgs.Empty);
+
+                    gamePlayingTimer = gamePlayingTimerMax; // Reset the playing timer
                 }
                 break;
             case State.Playing:
                 // Game logic goes here
-                playingTimer -= Time.deltaTime;
+                gamePlayingTimer -= Time.deltaTime;
 
-                Debug.Log("Playing: " + playingTimer);
+                Debug.Log("Playing: " + gamePlayingTimer);
 
-                if (playingTimer < 0)
+                if (gamePlayingTimer < 0)
                 {
                     state = State.GameOver;
                     OnStateChanged?.Invoke(this, EventArgs.Empty);
@@ -91,5 +95,15 @@ public class GameManager : MonoBehaviour
     public float GetCountingToStartTimer()
     {
         return countingToStartTimer;
+    }
+
+    public bool IsGameOver()
+    {
+        return state == State.GameOver;
+    }
+
+    public float GetGamePlayingTimerNormalized()
+    {
+        return 1 - (gamePlayingTimer / gamePlayingTimerMax);
     }
 }
