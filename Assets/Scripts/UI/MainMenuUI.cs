@@ -20,5 +20,7 @@ public class MainMenuUI : MonoBehaviour
         {
             Application.Quit();
         });
+
+        Time.timeScale = 1f; // Ensure time scale is reset when returning to main menu
     }
 }

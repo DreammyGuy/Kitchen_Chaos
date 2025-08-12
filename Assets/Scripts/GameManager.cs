@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public event EventHandler OnStateChanged;
+    public event EventHandler OnGamePaused;
+    public event EventHandler OnGameUnpaused;
 
     private enum State
     {
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
     private float countingToStartTimer = 3f;
     private float gamePlayingTimer;
     private float gamePlayingTimerMax = 10f;
+    private bool isGamePaused = false;
 
 
     private void Awake()
@@ -33,14 +36,22 @@ public class GameManager : MonoBehaviour
         state = State.WaitingToStart;
     }
 
+    private void Start()
+    {
+        GameInput.Instance.OnPauseAction += GameInput_OnPauseAction;
+    }
+
+    private void GameInput_OnPauseAction(object sender, EventArgs e)
+    {
+        TogglePauseGame();
+    }
+
     private void Update()
     {
         switch (state)
         {
             case State.WaitingToStart:
                 waitingToStartTimer -= Time.deltaTime;
-
-                Debug.Log("Waiting to start: " + waitingToStartTimer);
 
                 if (waitingToStartTimer < 0)
                 {
@@ -51,8 +62,6 @@ public class GameManager : MonoBehaviour
             case State.CountingToStart:
                 // Waiting for countdown to finish
                 countingToStartTimer -= Time.deltaTime;
-
-                Debug.Log("Counting to start: " + countingToStartTimer);
 
                 if (countingToStartTimer < 0)
                 {
@@ -66,8 +75,6 @@ public class GameManager : MonoBehaviour
                 // Game logic goes here
                 gamePlayingTimer -= Time.deltaTime;
 
-                Debug.Log("Playing: " + gamePlayingTimer);
-
                 if (gamePlayingTimer < 0)
                 {
                     state = State.GameOver;
@@ -76,7 +83,6 @@ public class GameManager : MonoBehaviour
                 break;
             case State.GameOver:
                 // Handle game over logic
-                Debug.Log("Game Over!");
 
                 break;
         }
@@ -105,5 +111,22 @@ public class GameManager : MonoBehaviour
     public float GetGamePlayingTimerNormalized()
     {
         return 1 - (gamePlayingTimer / gamePlayingTimerMax);
+    }
+
+    public void TogglePauseGame()
+    {
+        isGamePaused = !isGamePaused;
+        if (isGamePaused)
+        {
+            Time.timeScale = 0f;
+
+            OnGamePaused?.Invoke(this, EventArgs.Empty);
+        }
+        else
+        {
+            Time.timeScale = 1f;
+
+            OnGameUnpaused?.Invoke(this, EventArgs.Empty);
+        }
     }
 }
